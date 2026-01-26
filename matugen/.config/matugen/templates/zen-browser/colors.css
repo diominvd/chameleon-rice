@@ -1,0 +1,8 @@
+:root {
+    --zen-primary: {{colors.primary.default.hex}} !important;
+    --zen-accent: {{colors.secondary.default.hex}} !important;
+    --zen-surface: {{colors.surface.default.hex}} !important;
+    --zen-on-surface: {{colors.on_surface.default.hex}} !important;
+    --zen-trans: {{colors.surface.default.hex}}D6 !important;
+    --zen-backdrop-filter: blur(12px) saturate(180%) !important;
+}

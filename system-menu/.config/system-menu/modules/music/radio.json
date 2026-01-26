@@ -1,0 +1,30 @@
+[
+  {
+    "name": "☕ Lofi Radio (Main)",
+    "url": "http://stream.laut.fm/lofi"
+  },
+  {
+    "name": "🎷 Jazzhop & Lofi (Loungetunes)",
+    "url": "http://stream.laut.fm/loungetunes"
+  },
+  {
+    "name": "🎹 Relaxing Piano",
+    "url": "http://stream.laut.fm/relaxing-piano"
+  },
+  {
+    "name": "💤 Chill Out FM (Sleep)",
+    "url": "http://stream.laut.fm/chill-out-fm"
+  },
+  {
+    "name": "📚 Study & Relax (Schooltools)",
+    "url": "http://stream.laut.fm/schooltools"
+  },
+  {
+    "name": "⛩️ Anime & Chill (Switzerland)",
+    "url": "http://stream.laut.fm/anime-radio-switzerland"
+  },
+  {
+    "name": "🌌 Nightride FM (Synthwave)",
+    "url": "http://stream.nightride.fm/nightride.m4a"
+  }
+]

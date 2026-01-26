@@ -1,0 +1,70 @@
+@import "components/colors.css";
+@import "components/panel-color.css";
+@import "components/panel-shape.css";
+@import "components/widgets-color.css";
+@import "components/widgets-shape.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s cubic-bezier(0.05, 0.7, 0.1, 1);
+}
+
+#custom-launcher {
+    margin: 6px 2px 6px 6px;
+    padding: 2px 10px;
+}
+
+#media {
+    margin: 6px 2px;
+    padding: 2px 8px;
+}
+#custom-media-info {
+    padding: 0 6px;
+}
+#custom-media-prev,
+#custom-media-play,
+#custom-media-next {
+    padding: 0 8px;
+}
+
+#workspaces button {
+    margin: 6px 2px;
+    padding: 2px 6px;
+    transition:
+        padding 0.2s cubic-bezier(0.05, 0.7, 0.1, 1),
+        background-color 0.2s;
+}
+#workspaces button.active {
+    margin: 6px 2px;
+    padding: 2px 16px;
+}
+
+#disk.root,
+#disk.home,
+#custom-recorder,
+#custom-brightness,
+#bluetooth,
+#pulseaudio,
+#network,
+#battery,
+#language {
+    margin: 6px 2px;
+    padding: 2px 12px;
+}
+
+#tray {
+    margin: 6px 2px;
+    padding: 2px 16px;
+}
+
+#clock {
+    margin: 6px 2px;
+    padding: 2px 12px;
+}
+
+#custom-power {
+    margin: 6px 6px 6px 2px;
+    padding: 2px 12px;
+}

@@ -1,0 +1,196 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 40,
+  "spacing": 2,
+  "exclusive": true,
+  "reload_style_on_change": true,
+
+  "modules-left": [
+    "custom/launcher",
+    "custom/separator",
+    "group/disks",
+    "custom/separator",
+    "group/media",
+  ],
+  "modules-center": ["hyprland/workspaces", "custom/recorder"],
+  "modules-right": [
+    "custom/brightness",
+    "custom/separator",
+    "pulseaudio",
+    "custom/separator",
+    "network",
+    "custom/separator",
+    "battery",
+    "custom/separator",
+    "tray",
+    "custom/separator",
+    "hyprland/language",
+    "custom/separator",
+    "clock",
+    "custom/separator",
+    "custom/power",
+  ],
+
+  // Groups
+  "group/disks": {
+    "orientation": "horizontal",
+    "modules": ["disk#root", "disk#home"],
+  },
+  "group/media": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "media-controls",
+      "transition-left-to-right": true,
+      "click-to-reveal": false,
+    },
+    "modules": [
+      "custom/media-info",
+      "custom/media-prev",
+      "custom/media-play",
+      "custom/media-next",
+    ],
+  },
+
+  "custom/separator": {
+    "format": " | ",
+    "tooltip": false,
+  },
+
+  // left
+  "custom/launcher": {
+    "format": "ARCH",
+    "on-click": "kitty --hold fastfetch",
+    "tooltip": false,
+  },
+  "disk#root": {
+    "interval": 30,
+    "format": "/ {percentage_used}%  ",
+    "path": "/",
+    "on-click-right": "kitty -e ncdu /",
+  },
+  "disk#home": {
+    "interval": 30,
+    "format": "/h {percentage_used}%",
+    "path": "/home",
+    "on-click-right": "kitty -e ncdu ~",
+  },
+  "custom/media-info": {
+    "exec": "$HOME/.config/waybar/scripts/music.sh | sed 's/^RADIO://'",
+    "interval": 2,
+    "max-length": 35,
+    "format": "󰎆 {}",
+    "on-click": "playerctl play-pause",
+    "on-click-right": "hyprctl dispatch togglespecialworkspace magic",
+    "tooltip": false,
+  },
+  "custom/media-prev": {
+    "format": "{}",
+    "exec": "$HOME/.config/waybar/scripts/music.sh | grep -qE 'RADIO:|No music' && echo '' || echo ''",
+    "interval": 1,
+    "on-click": "playerctl previous",
+  },
+  "custom/media-play": {
+    "format": "{icon}",
+    "return-type": "json",
+    "exec": "playerctl metadata --format '{\"text\": \"{{status}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' 2>/dev/null",
+    "interval": 1,
+    "on-click": "playerctl play-pause",
+    "format-icons": { "Playing": "", "Paused": "", "Stopped": "" },
+  },
+  "custom/media-next": {
+    "format": "{}",
+    "exec": "$HOME/.config/waybar/scripts/music.sh | grep -qE 'RADIO:|No music' && echo '' || echo ''",
+    "interval": 1,
+    "on-click": "playerctl next",
+  },
+
+  // Center
+  "hyprland/workspaces": {
+    "disable-scroll": false,
+    "all-outputs": true,
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "1": "I",
+      "2": "II",
+      "3": "III",
+      "4": "IV",
+      "5": "V",
+      "6": "VI",
+      "7": "VII",
+      "8": "VIII",
+      "9": "IX",
+      "10": "X",
+    },
+  },
+  "custom/recorder": {
+    "format": " | REC",
+    "exec": "pgrep -x wf-recorder > /dev/null && echo \"running\"",
+    "interval": 1,
+    "on-click": "pkill -INT wf-recorder && notify-send -i camera-video \"Recording stoped\"",
+    "tooltip": false,
+  },
+
+  // Right
+  "custom/brightness": {
+    "format": "B: {}",
+    "exec": "~/.config/waybar/scripts/brightness.sh",
+    "return-type": "json",
+    "interval": 1,
+    "on-scroll-up": "~/.config/waybar/scripts/brightness.sh --inc",
+    "on-scroll-down": "~/.config/waybar/scripts/brightness.sh --dec",
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "V: MUTED",
+    "format-icons": {
+      "headphone": "H:",
+      "default": ["V:", "V:", "V:"],
+    },
+    "scroll-step": 5,
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "kitty -e wiremix",
+  },
+  "network": {
+    "interval": 5,
+    "format-wifi": "N: {signalStrength}%",
+    "format-ethernet": "WIRED",
+    "format-disconnected": "N: Off",
+    "on-click": "kitty -e cloudflare-speed-cli",
+    "on-click-right": "kitty -e wifitui",
+  },
+  "battery": {
+    "interval": 60,
+    "states": { "warning": 30, "critical": 15 },
+    "format": "BAT: {capacity}%",
+    "format-charging": "CH: {capacity}%",
+    "on-click-right": "kitty -e sudo powertop",
+  },
+  "tray": {
+    "icon-size": 14,
+    "spacing": 10,
+  },
+  "hyprland/language": {
+    "format": "KB: {}",
+    "format-en": "US",
+    "format-ru": "RU",
+  },
+  "clock": {
+    "interval": 1,
+    "format": "{:%H:%M}",
+    "format-alt": "{:%A, %d %B %Y  %H:%M:%S}",
+    "tooltip": false,
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down",
+    },
+  },
+  "custom/power": {
+    "format": "X",
+    "on-click": "~/.config/scripts/sys-menu/power.sh",
+    "tooltip": false,
+  },
+}

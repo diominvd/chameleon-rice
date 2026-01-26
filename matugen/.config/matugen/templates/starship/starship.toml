@@ -1,0 +1,54 @@
+palette         = "matugen"
+add_newline     = false
+
+format = """
+$os$username[ · ](bold gray)$hostname $directory $git_branch$git_status
+$character
+"""
+
+[os]
+disabled        = false
+style           = "bold primary"
+format          = "[$symbol]($style) "
+
+[os.symbols]
+Arch            = ""
+
+[username]
+show_always     = true
+style_user      = "bold primary"
+format          = "[$user]($style)"
+
+[hostname]
+ssh_only        = false
+style           = "bold accent"
+format          = "[$hostname]($style) "
+trim_at         = "."
+
+[directory]
+style           = "bold secondary"
+format          = "[$path]($style)"
+truncation_length = 3
+
+[git_branch]
+disabled        = false
+symbol          = ""
+style           = "bold accent"
+format          = "on [$symbol $branch]($style) "
+
+[git_status]
+disabled        = false
+style           = "bold error"
+format          = "([$all_status$ahead_behind]($style))"
+
+[character]
+success_symbol  = "  [&](bold primary) "
+error_symbol    = "  [&](bold error) "
+vicmd_symbol    = "  [V](bold secondary) "
+
+[palettes.matugen]
+primary   = "#{{colors.primary.default.hex_stripped}}"
+secondary = "#{{colors.secondary.default.hex_stripped}}"
+accent    = "#{{colors.tertiary.default.hex_stripped}}"
+error     = "#{{colors.error.default.hex_stripped}}"
+gray      = "#{{colors.outline.default.hex_stripped}}"

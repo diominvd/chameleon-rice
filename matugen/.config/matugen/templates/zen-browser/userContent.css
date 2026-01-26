@@ -1,0 +1,9 @@
+@import url("colors.css");
+
+@-moz-document url-prefix("about:") {
+    body,
+    #main-content {
+        background-color: var(--zen-surface) !important;
+        color: var(--zen-on-surface) !important;
+    }
+}

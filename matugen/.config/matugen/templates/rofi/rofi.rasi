@@ -1,0 +1,8 @@
+* {
+    bg:        #{{colors.surface.dark.hex_stripped}};
+    bg-alpha:  #{{colors.surface.dark.hex_stripped}}d9;
+    fg:        #{{colors.on_surface.dark.hex_stripped}};
+    accent:    #{{colors.primary.dark.hex_stripped}};
+    on-accent: #{{colors.on_primary.dark.hex_stripped}};
+    select:    #{{colors.surface_variant.dark.hex_stripped}};
+}

@@ -1,0 +1,8 @@
+* {
+    bg:        #141313;
+    bg-alpha:  #141313d9;
+    fg:        #e5e2e0;
+    accent:    #c7c7bc;
+    on-accent: #30312a;
+    select:    #474740;
+}

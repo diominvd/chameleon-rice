@@ -1,0 +1,25 @@
+@define-color primary              {{colors.primary.dark.hex}};
+@define-color on_primary           {{colors.on_primary.dark.hex}};
+@define-color primary_container    rgba({{colors.primary_container.dark.red}}, {{colors.primary_container.dark.green}}, {{colors.primary_container.dark.blue}}, 0.8);
+@define-color on_primary_container {{colors.on_primary_container.dark.hex}};
+
+@define-color secondary            {{colors.secondary.dark.hex}};
+@define-color on_secondary         {{colors.on_secondary.dark.hex}};
+@define-color secondary_container  rgba({{colors.secondary_container.dark.red}}, {{colors.secondary_container.dark.green}}, {{colors.secondary_container.dark.blue}}, 0.7);
+@define-color on_secondary_container {{colors.on_secondary_container.dark.hex}};
+
+@define-color tertiary             {{colors.tertiary.dark.hex}};
+@define-color on_tertiary          {{colors.on_tertiary.dark.hex}};
+@define-color tertiary_container   rgba({{colors.tertiary_container.dark.red}}, {{colors.tertiary_container.dark.green}}, {{colors.tertiary_container.dark.blue}}, 0.7);
+@define-color on_tertiary_container {{colors.on_tertiary_container.dark.hex}};
+
+@define-color surface              rgba({{colors.surface.dark.red}}, {{colors.surface.dark.green}}, {{colors.surface.dark.blue}}, 0.85);
+@define-color surface_variant      rgba({{colors.surface_variant.dark.red}}, {{colors.surface_variant.dark.green}}, {{colors.surface_variant.dark.blue}}, 0.8);
+@define-color on_surface           {{colors.on_surface.dark.hex}};
+@define-color on_surface_variant   {{colors.on_surface_variant.dark.hex}};
+
+@define-color outline_variant      rgba({{colors.outline_variant.dark.red}}, {{colors.outline_variant.dark.green}}, {{colors.outline_variant.dark.blue}}, 0.6);
+
+@define-color error                {{colors.error.dark.hex}};
+@define-color error_container      rgba({{colors.error_container.dark.red}}, {{colors.error_container.dark.green}}, {{colors.error_container.dark.blue}}, 0.8);
+@define-color on_error_container   {{colors.on_error_container.dark.hex}};

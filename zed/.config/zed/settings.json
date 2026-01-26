@@ -1,0 +1,90 @@
+{
+  // ─── NETWORK ─────────────────────────────────────────────────────
+  "proxy": "socks5h://127.0.0.1:10808",
+
+  // ─── LANGUAGE MODEL PROVIDERS ────────────────────────────────────
+  "agent": {
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-2.5-flash",
+    },
+    "default_profile": "write",
+    "always_allow_tool_actions": true,
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "language_models": {
+    "ollama": {
+      "api_url": "http://localhost:11434",
+      "auto_discover": false,
+      "available_models": [
+        {
+          "name": "qwen2.5-coder:7b",
+          "display_name": "Qwen2.5 Coder 7B",
+          "max_tokens": 12000,
+          "supports_tools": true,
+          "supports_thinking": false,
+          "supports_images": false,
+        },
+      ],
+    },
+  },
+  "context_servers": {
+    "filesystem": {
+      "env": {},
+      "command": "/usr/bin/mcp-server-filesystem",
+      "args": ["/home/diominvd/.config", "/home/diominvd/.dotfiles"],
+    },
+  },
+
+  // ─── UI / APPEARANCE ─────────────────────────────────────────────
+  "ui_font_family": "JetBrainsMono Nerd Font Mono",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "icon_theme": "Colored Zed Icons Theme Light",
+
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Matugen Dynamic",
+  },
+
+  // ─── PANELS & INTERFACE ─────────────────────────────────────────
+  "title_bar": {
+    "show_onboarding_banner": false,
+    "show_project_items": false,
+    "show_branch_name": false,
+    "show_user_menu": false,
+  },
+  "tab_bar": { "show": true },
+  "toolbar": { "quick_actions": false },
+  "scrollbar": { "show": "never" },
+  "status_bar": { "experimental.show": true },
+
+  "project_panel": {
+    "dock": "left",
+    "default_width": 400,
+    "hide_root": true,
+    "auto_fold_dirs": false,
+    "starts_open": false,
+    "git_status": false,
+    "scrollbar": { "show": "never" },
+    "indent_guides": { "show": "never" },
+  },
+
+  "outline_panel": {
+    "default_width": 300,
+    "indent_guides": { "show": "never" },
+  },
+
+  "file_finder": {
+    "modal_max_width": "large",
+  },
+
+  // ─── LANGUAGES -----------------------------------------------------
+  "languages": {
+    "Python": {
+      "format_on_save": "off",
+    },
+  },
+}

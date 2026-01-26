@@ -1,0 +1,149 @@
+{
+  "comment": "Arch Ultimate System Cleaner - Configuration File",
+  "comment2": "Edit this file to customize cleaner behavior",
+
+  "backup": {
+    "enabled": true,
+    "use_timeshift": true,
+    "keep_only_latest": true,
+    "backup_timeout_seconds": 600,
+    "comment": "Automatic backup settings before cleanup"
+  },
+
+  "pacman_cache": {
+    "enabled": true,
+    "min_size_mb": 100,
+    "keep_versions": 3,
+    "comment": "Keep N newest versions of packages"
+  },
+
+  "orphaned_packages": {
+    "enabled": true,
+    "auto_remove": false,
+    "comment": "Find packages with no dependencies"
+  },
+
+  "journal_logs": {
+    "enabled": true,
+    "min_size_mb": 500,
+    "keep_days": 30,
+    "comment": "Systemd journal log cleanup"
+  },
+
+  "user_cache": {
+    "enabled": true,
+    "min_size_mb": 50,
+    "exclude_patterns": ["chromium", "firefox", ".mozilla"],
+    "comment": "User cache directories (~/cache)"
+  },
+
+  "build_caches": {
+    "enabled": true,
+    "npm": {
+      "enabled": true,
+      "min_size_mb": 100
+    },
+    "cargo": {
+      "enabled": true,
+      "min_size_mb": 200
+    },
+    "pip": {
+      "enabled": true,
+      "min_size_mb": 100
+    },
+    "go": {
+      "enabled": true,
+      "min_size_mb": 200
+    },
+    "maven": {
+      "enabled": true,
+      "min_size_mb": 500
+    }
+  },
+
+  "broken_symlinks": {
+    "enabled": true,
+    "max_scan_items": 10000,
+    "comment": "Find and list broken symbolic links"
+  },
+
+  "old_configs": {
+    "enabled": true,
+    "patterns": [".pacnew", ".pacsave"],
+    "comment": "Old pacman configuration files"
+  },
+
+  "duplicate_files": {
+    "enabled": true,
+    "min_file_size_kb": 1,
+    "scan_dirs": [".cache/thumbnails", ".cache/fontconfig"],
+    "comment": "Find duplicate files (SHA256 based)"
+  },
+
+  "etc_orphaned": {
+    "enabled": true,
+    "auto_detect": true,
+    "min_size_kb": 0,
+    "comment": "Scan /etc for orphaned directories"
+  },
+
+  "trash": {
+    "enabled": true,
+    "min_size_mb": 1,
+    "comment": "User trash directory cleanup"
+  },
+
+  "thumbnails": {
+    "enabled": true,
+    "min_size_mb": 50,
+    "comment": "Image thumbnail cache cleanup"
+  },
+
+  "temp_files": {
+    "enabled": true,
+    "min_age_days": 30,
+    "comment": "Old temporary files cleanup"
+  },
+
+  "aur_cache": {
+    "enabled": true,
+    "cache_valid_hours": 24,
+    "timeout_seconds": 30,
+    "fallback_offline": true,
+    "comment": "AUR package list caching"
+  },
+
+  "safety": {
+    "strict_mode": true,
+    "require_confirmation": true,
+    "dry_run_preview": true,
+    "verify_ownership": true,
+    "timeout_seconds": 300,
+    "comment": "Safety and verification settings"
+  },
+
+  "logging": {
+    "enabled": true,
+    "verbose": false,
+    "log_file": "~/.cache/archcleaner/cleanup.log",
+    "max_log_size_mb": 10,
+    "comment": "Operation logging settings"
+  },
+
+  "ui": {
+    "show_progress": true,
+    "show_estimates": true,
+    "detailed_output": true,
+    "colors": true,
+    "comment": "User interface settings"
+  },
+
+  "advanced": {
+    "parallel_operations": false,
+    "max_workers": 4,
+    "connection_timeout": 10,
+    "retry_failed": true,
+    "max_retries": 3,
+    "comment": "Advanced operational settings"
+  }
+}

@@ -1,0 +1,102 @@
+menu {
+    background: transparent;
+}
+
+#custom-launcher {
+    background: transparent;
+    color: @on_primary;
+}
+#custom-launcher:hover {
+    background: transparent;
+    color: @on_secondary;
+}
+
+#media {
+    background: transparent;
+}
+#custom-media-info {
+    color: @on_secondary;
+}
+#custom-media-prev,
+#custom-media-play,
+#custom-media-next {
+    color: @on_secondary;
+}
+#custom-media-prev:hover,
+#custom-media-play:hover,
+#custom-media-next:hover {
+    color: @primary_container;
+    background: transparent;
+}
+
+#workspaces button {
+    background: transparent;
+    color: @on_surface_variant;
+}
+#workspaces button.active {
+    background: transparent;
+    color: @on_primary;
+}
+#workspaces button:hover {
+    background: transparent;
+    color: @on_secondary_container;
+}
+#workspaces button.visible,
+#workspaces button.persistent {
+    color: @on_primary;
+}
+#workspaces button.visible:hover,
+#workspaces button.persistent:hover {
+    color: @on_secondary_container;
+}
+
+#disk.root,
+#disk.home,
+#custom-recorder,
+#custom-brightness,
+#bluetooth,
+#pulseaudio,
+#network,
+#battery,
+#language {
+    background: transparent;
+    color: @on_surface_variant;
+}
+
+#custom-brightness:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#network:hover,
+#battery:hover,
+#language:hover {
+    background: transparent;
+    color: @on_secondary_container;
+}
+
+#pulseaudio.muted {
+    background-color: transparent;
+    color: @on_tertiary_container;
+}
+#pulseaudio.muted:hover {
+    background: transparent;
+    color: @on_tertiary;
+}
+
+#tray {
+    background: transparent;
+    color: @on_surface_variant;
+}
+
+#clock {
+    background: transparent;
+    color: @on_surface_variant;
+}
+
+#custom-power {
+    background: transparent;
+    color: @on_primary;
+}
+#custom-power:hover {
+    background: transparent;
+    color: @on_secondary;
+}

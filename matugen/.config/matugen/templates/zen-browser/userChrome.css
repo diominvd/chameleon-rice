@@ -1,0 +1,17 @@
+@import url("colors.css");
+
+#navigator-toolbox,
+#zen-sidebar-box,
+#zen-vertical-tabs-display,
+#zen-sidebar-bottom-buttons {
+    background: var(--zen-trans) !important;
+    backdrop-filter: var(--zen-backdrop-filter) !important;
+    border: none !important;
+}
+.tabbrowser-tab[selected="true"] .tab-content {
+    background: linear-gradient(
+        135deg,
+        var(--zen-primary) 0%,
+        var(--zen-accent) 100%
+    ) !important;
+}

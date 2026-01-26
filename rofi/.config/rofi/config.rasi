@@ -1,0 +1,82 @@
+configuration {
+    modi:                       "drun";
+    show-icons:                 false;
+    display-drun:               "";
+}
+
+@import "~/.config/rofi/colors.rasi"
+
+* {
+    font:                       "JetBrainsMono Nerd Font 11";
+    background-color:           transparent;
+    separatorcolor:             transparent;
+}
+
+window {
+    transparency:               "real";
+    width:                      400px;
+    border:                     2px solid;
+    border-color:               @accent;
+    border-radius:              12px;
+    background-color:           @bg-alpha;
+    location:                   north east;
+    anchor:                     north east;
+    y-offset:                   10px;
+    x-offset:                   -10px;
+}
+
+mainbox {
+    padding:                    15px;
+    children:                   [ "inputbar", "listview" ];
+}
+
+inputbar {
+    margin:                     0 0 12px 0;
+    children:                   [ "prompt", "entry" ];
+}
+
+prompt {
+    text-color:                 @accent;
+    margin:                     0 12px 0 0;
+}
+
+entry {
+    text-color:                 @fg;
+    placeholder:                "Search...";
+    placeholder-color:          @select;
+}
+
+listview {
+    columns:                    1;
+    lines:                      8;
+    fixed-height:               true;
+    scrollbar:                  false;
+    spacing:                    4px;
+    border:                     0px;
+}
+
+element {
+    padding:                    8px 12px;
+    border-radius:              12px;
+}
+
+element normal.normal {
+    background-color:           transparent;
+    text-color:                 @fg;
+}
+
+element alternate.normal {
+    background-color:           transparent;
+    text-color:                 @fg;
+}
+
+element selected.normal {
+    background-color:           transparent;
+    text-color:                 @accent;
+}
+
+element-text {
+    background-color:           transparent;
+    text-color:                 inherit;
+    vertical-align:             0.5;
+}

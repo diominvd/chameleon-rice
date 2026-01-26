@@ -1,0 +1,59 @@
+[config]
+swww = true
+reload_apps = true
+
+[templates.hyprland]
+input_path = "~/.config/matugen/templates/hyprland/hyprland.conf"
+output_path = "~/.config/hypr/colors.conf"
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty/kitty.conf'
+output_path = '~/.config/kitty/colors.conf'
+
+[templates.starship]
+input_path = "~/.config/matugen/templates/starship/starship.toml"
+output_path = "~/.config/starship.toml"
+
+[templates.mako]
+input_path = "~/.config/matugen/templates/mako/mako.conf"
+output_path = "~/.config/mako/config"
+
+[templates.rofi]
+input_path = '~/.config/matugen/templates/rofi/rofi.rasi'
+output_path = '~/.config/rofi/colors.rasi'
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/waybar/waybar.css'
+output_path = '~/.config/waybar/components/colors.css'
+
+[templates.zen-colors]
+input_path = "~/.config/matugen/templates/zen-browser/colors.css"
+output_path = "~/.zen/default/chrome/colors.css"
+
+[templates.zen-chrome]
+input_path = "~/.config/matugen/templates/zen-browser/userChrome.css"
+output_path = "~/.zen/default/chrome/userChrome.css"
+
+[templates.zen-content]
+input_path = "~/.config/matugen/templates/zen-browser/userContent.css"
+output_path = "~/.zen/default/chrome/userContent.css"
+
+[templates.zed]
+input_path = "~/.config/matugen/templates/zed-editor/theme.json"
+output_path = "~/.config/zed/themes/matugen.json"
+
+[templates.btop]
+input_path = "~/.config/matugen/templates/btop/btop.theme"
+output_path = "~/.config/btop/themes/matugen.theme"
+
+[templates.gtk-3]
+input_path = "~/.config/matugen/templates/gtk/gtk.css"
+output_path = "~/.config/gtk-3.0/colors.css"
+
+[templates.gtk-4]
+input_path = "~/.config/matugen/templates/gtk/gtk.css"
+output_path = "~/.config/gtk-4.0/colors.css"
+
+[templates.kvantum]
+input_path = "~/.config/matugen/templates/kvantum/kvantum.kvconfig"
+output_path = "~/.config/Kvantum/Material/Material.kvconfig"

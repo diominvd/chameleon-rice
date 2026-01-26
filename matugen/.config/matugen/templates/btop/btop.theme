@@ -1,0 +1,46 @@
+# ~/.config/btop/themes/matugen-top-tier-one-tone.theme
+# Максимально стильный однотон + мягчайший градиент по прозрачности/яркости
+
+theme[main_bg]=""
+theme[main_fg]="{{colors.primary.default.hex}}d0"
+
+theme[title]="{{colors.primary.default.hex}}"
+theme[div_line]="{{colors.primary.default.hex}}40"      # почти невидимые, но читаемые линии
+
+theme[inactive_fg]="{{colors.primary.default.hex}}60"
+theme[hi_fg]="{{colors.primary.default.hex}}f0"
+
+theme[selected_bg]="{{colors.primary.default.hex}}18"
+theme[selected_fg]="{{colors.on_primary.default.hex}}"
+theme[button_bg]="{{colors.primary.default.hex}}10"
+theme[button_fg]="{{colors.on_primary.default.hex}}"
+
+# Графики — градиент от полного цвета → чуть тише → ещё тише (всё в одном hue)
+
+theme[graph_text]="{{colors.primary.default.hex}}a0"
+
+theme[cpu_start]="{{colors.primary.default.hex}}ff"
+theme[cpu_mid]="{{colors.primary.default.hex}}e0"
+theme[cpu_end]="{{colors.primary.default.hex}}b5"
+
+theme[mem_start]="{{colors.primary.default.hex}}f0"
+theme[mem_mid]="{{colors.primary.default.hex}}d5"
+theme[mem_end]="{{colors.primary.default.hex}}a0"
+
+theme[net_up_start]="{{colors.primary.default.hex}}ff"    # upload обычно самый яркий
+theme[net_up_mid]="{{colors.primary.default.hex}}e8"
+theme[net_up_end]="{{colors.primary.default.hex}}c0"
+
+theme[net_down_start]="{{colors.primary.default.hex}}d0"
+theme[net_down_mid]="{{colors.primary.default.hex}}b0"
+theme[net_down_end]="{{colors.primary.default.hex}}85"
+
+theme[proc_start]="{{colors.primary.default.hex}}ff"
+theme[proc_mid]="{{colors.primary.default.hex}}d8"
+theme[proc_end]="{{colors.primary.default.hex}}ad"
+
+theme[temp_start]="{{colors.primary.default.hex}}ff"
+theme[temp_mid]="{{colors.primary.default.hex}}e5"
+theme[temp_end]="{{colors.primary.default.hex}}c8"
+
+theme[idle_fg]="{{colors.primary.default.hex}}35"
