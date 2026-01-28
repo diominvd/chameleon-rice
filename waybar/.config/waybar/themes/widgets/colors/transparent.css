@@ -52,6 +52,7 @@ menu {
 
 #disk.root,
 #disk.home,
+#custom-minimize,
 #custom-recorder,
 #custom-brightness,
 #bluetooth,
@@ -63,6 +64,7 @@ menu {
     color: @on_surface_variant;
 }
 
+#custom-minimize:hover,
 #custom-brightness:hover,
 #bluetooth:hover,
 #pulseaudio:hover,

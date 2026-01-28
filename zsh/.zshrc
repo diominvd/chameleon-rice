@@ -43,9 +43,10 @@ export ZSH_COMPDUMP="$HOME/.cache/zsh/zcompdump-$HOST-$ZSH_VERSION"
 export NVIDIA_SETTINGS_RW_DIR="$XDG_CONFIG_HOME"
 export PATH="$HOME/.local/bin:$PATH"
 
-eval "$(starship init zsh)"
-
+# Variables
 export GEMINI_API_KEY=$(cat ~/.dotfiles/env/keys/.gemini)
+
+eval "$(starship init zsh)"
 
 TRAPUSR1() {
   zle && zle reset-prompt

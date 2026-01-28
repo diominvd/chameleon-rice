@@ -146,7 +146,7 @@ def get_waybar_node(waybar_mod):
             set_state=lambda s: waybar_mod.set_symlink(f, s, ext, symlink)
         )
 
-    return framework.Parent("Waybar", icon="", children=[
+    return framework.Parent("Waybar", icon="", children=[
         framework.Parent("Panel settings", icon="", children=[
             make_t("Color", "panel-color.css", "panel/colors", ".css"),
             make_t("Position", "panel-position.jsonc", "panel/positions", ".jsonc"),

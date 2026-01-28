@@ -7,7 +7,7 @@
   "reload_style_on_change": true,
 
   "modules-left": ["custom/launcher", "group/disks", "group/media"],
-  "modules-center": ["hyprland/workspaces", "custom/recorder"],
+  "modules-center": ["hyprland/workspaces", "custom/minimize", "custom/recorder"],
   "modules-right": [
     "custom/brightness",
     "pulseaudio",
@@ -43,19 +43,19 @@
 
   // left
   "custom/launcher": {
-    "format": "󰣇 Arch",
-    "on-click": "kitty --hold fastfetch",
+    "format": "󰣇  Arch",
+    "on-click": "python -B $HOME/.config/system-menu/main.py",
     "tooltip": false,
   },
   "disk#root": {
     "interval": 30,
-    "format": "󰋊 / {percentage_used}%",
+    "format": "󰋊  / {percentage_used}%",
     "path": "/",
     "on-click-right": "kitty -e ncdu /",
   },
   "disk#home": {
     "interval": 30,
-    "format": "󱂵 /h {percentage_used}%",
+    "format": "󱂵  /h {percentage_used}%",
     "path": "/home",
     "on-click-right": "kitty -e ncdu ~",
   },
@@ -63,7 +63,7 @@
     "exec": "$HOME/.config/waybar/scripts/music.sh | sed 's/^RADIO://'",
     "interval": 2,
     "max-length": 35,
-    "format": "󰎆 {}",
+    "format": "󰎆  {}",
     "on-click": "playerctl play-pause",
     "on-click-right": "hyprctl dispatch togglespecialworkspace magic",
     "tooltip": false,
@@ -96,8 +96,15 @@
     "on-click": "activate",
     "format": "{name}",
   },
+  "custom/minimize": {
+    "format": "{}",
+    "return-type": "json",
+    "interval": 1,
+    "exec": "$HOME/.config/waybar/scripts/minimize.sh",
+    "on-click": "$HOME/.config/waybar/scripts/minimize.sh show",
+  },
   "custom/recorder": {
-    "format": "󰻂 REC",
+    "format": "󰻂  REC",
     "exec": "pgrep -x wf-recorder > /dev/null && echo \"running\"",
     "interval": 1,
     "on-click": "pkill -INT wf-recorder && notify-send -i camera-video \"Recording stopped\"",
@@ -106,7 +113,7 @@
 
   // Right
   "custom/brightness": {
-    "format": "󰃠 {}",
+    "format": "󰃠  {}",
     "exec": "~/.config/waybar/scripts/brightness.sh",
     "return-type": "json",
     "interval": 1,
@@ -114,7 +121,7 @@
     "on-scroll-down": "~/.config/waybar/scripts/brightness.sh --dec",
   },
   "pulseaudio": {
-    "format": "{icon} {volume}%",
+    "format": "{icon}  {volume}%",
     "format-muted": "  Muted",
     "format-icons": {
       "headphone": "",
@@ -126,9 +133,9 @@
   },
   "network": {
     "interval": 5,
-    "format-wifi": "󰖩 {signalStrength}%",
-    "format-ethernet": "󰈀 Wired",
-    "format-disconnected": "󰖪  Off",
+    "format-wifi": "󰖩  {signalStrength}%",
+    "format-ethernet": "󰈀  Wired",
+    "format-disconnected": "󰖪  Off",
     "on-click": "kitty -e cloudflare-speed-cli",
     "on-click-right": "kitty -e wifitui",
   },
@@ -144,8 +151,8 @@
   "battery": {
     "interval": 60,
     "states": { "warning": 30, "critical": 15 },
-    "format": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
+    "format": "{icon}  {capacity}%",
+    "format-charging": "  {capacity}%",
     "format-icons": ["", "", "", "", "", "", "", "", "", "", ""],
     "on-click-right": "kitty -e sudo powertop",
   },
