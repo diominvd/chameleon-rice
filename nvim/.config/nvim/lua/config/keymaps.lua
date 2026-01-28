@@ -6,6 +6,9 @@ vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save" })
 vim.keymap.set("n", "<leader>wq", ":wqa<CR>", { desc = "Save and exit" })
 vim.keymap.set("n", "<leader>qq", ":qa!<CR>", { desc = "Exit without save" })
 
+-- Reload current file
+vim.keymap.set("n", "<leader>er", ":e!<CR>", { desc = "Reload current file (force)" })
+
 vim.keymap.set("i", "jk", "<Esc>", { desc = "Exit insert mode" })
 vim.keymap.set("i", "kj", "<Esc>", { desc = "Exit insert mode" })
 

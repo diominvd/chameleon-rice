@@ -1,0 +1,27 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "theme": "matugen",
+  "autoupdate": true,
+  "tui": {
+    "scroll_speed": 3,
+    "scroll_acceleration": {
+      "enabled": true
+    },
+    "diff_style": "auto"
+  },
+  "tools": {
+    "write": true,
+    "bash": true
+  },
+  "model": "opencode/big-pickle",
+  "command": {
+    "ru": {
+      "template": "Answer on Russian language",
+      "description": "Russian language mode"
+    },
+    "review": {
+      "template": "Review the current code and suggest improvements, and point out any flaws",
+      "description": "Review code"
+    }
+  }
+}

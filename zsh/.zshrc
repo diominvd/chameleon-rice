@@ -44,10 +44,13 @@ export NVIDIA_SETTINGS_RW_DIR="$XDG_CONFIG_HOME"
 export PATH="$HOME/.local/bin:$PATH"
 
 # Variables
-export GEMINI_API_KEY=$(cat ~/.dotfiles/env/keys/.gemini)
+export GOOGLE_GENERATIVE_AI_API_KEY=$(cat ~/.dotfiles/env/keys/.gemini)
 
 eval "$(starship init zsh)"
 
 TRAPUSR1() {
   zle && zle reset-prompt
 }
+
+# opencode
+export PATH=/home/diominvd/.opencode/bin:$PATH

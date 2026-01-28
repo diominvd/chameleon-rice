@@ -18,6 +18,10 @@ output_path = "~/.config/starship.toml"
 input_path = "~/.config/matugen/templates/neovim/nvim.lua"
 output_path = "~/.config/nvim/lua/colors.lua"
 
+[templates.opencode]
+input_path = "~/.config/matugen/templates/opencode/theme.json"
+output_path = "~/.config/opencode/themes/matugen.json"
+
 [templates.mako]
 input_path = "~/.config/matugen/templates/mako/mako.conf"
 output_path = "~/.config/mako/config"
