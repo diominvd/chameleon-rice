@@ -1,13 +1,16 @@
+-- Status line with mode, git, and file information
 return {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     opts = {
         options = {
             theme = "base16",
+            -- Use global status line (single line for all windows)
             globalstatus = true,
             icons_enabled = true,
-            component_separators = { left = '', right = '' },
-            section_separators = { left = '', right = '' },
+            -- Component separators
+            component_separators = { left = '', right = '' },
+            section_separators = { left = '', right = '' },
             disabled_filetypes = { statusline = { "dashboard", "alpha", "NvimTree" } },
         },
         sections = {
@@ -18,6 +21,7 @@ return {
             lualine_y = { "progress" },
             lualine_z = { "location" },
         },
+        -- Inactive window statusline
         inactive_sections = {
             lualine_a = {},
             lualine_b = {},

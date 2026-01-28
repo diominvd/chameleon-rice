@@ -1,6 +1,7 @@
+-- Auto-closing brackets and quotes
 return {
   "windwp/nvim-autopairs",
-  event = "InsertEnter",
+  event = "InsertEnter",  -- Load on entering insert mode
   opts = {
     check_ts = true,
     disable_filetype = { "TelescopePrompt" },

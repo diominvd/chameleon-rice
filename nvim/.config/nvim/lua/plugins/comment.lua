@@ -1,3 +1,4 @@
+-- Smart comment toggling with motions support
 return {
   "numToStr/Comment.nvim",
   opts = {},

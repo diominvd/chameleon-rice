@@ -1,3 +1,4 @@
+-- Buffer tabs with smooth navigation
 return {
     "akinsho/bufferline.nvim",
     version = "*",
@@ -5,6 +6,7 @@ return {
     config = function()
         require("bufferline").setup({
             options = {
+                -- Offset for neo-tree to avoid covering tabs
                 offsets = {
                     {
                         filetype = "neo-tree",
@@ -15,7 +17,13 @@ return {
                 },
             }
         })
-        vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
-        vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Previous buffer" })
+        
+        -- ============================================================================
+        -- Buffer Navigation Keybindings
+        -- ============================================================================
+        vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<cr>", 
+            { noremap = true, desc = "Next buffer" })
+        vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", 
+            { noremap = true, desc = "Previous buffer" })
     end,
 }
