@@ -157,7 +157,7 @@
     "format": "{}",
     "on-click": "~/.config/scripts/power_save.sh",
     "on-click-right": "kitty -e sudo powertop",
-    "tooltip": false
+    "tooltip": true
   },
   "tray": {
     "icon-size": 14,
