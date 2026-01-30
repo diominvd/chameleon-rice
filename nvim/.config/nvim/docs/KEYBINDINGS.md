@@ -46,19 +46,25 @@
 
 ## WINDOWS
 
+**Management**
 - `<leader>sv` - Split vertical
 - `<leader>sh` - Split horizontal
+- `<leader>q` - Close current split
 - `<leader>se` - Equalize sizes
 - `<leader>sx` - Close window
-- `<C-Up>` - Increase height
-- `<C-Down>` - Decrease height
+
+**Resize**
+- `<M-k>` - Resize up
+- `<M-j>` - Resize down
+- `<M-h>` - Resize left
+- `<M-l>` - Resize right
 
 ---
 
 ## TEXT EDITING
 
 **Lines**
-- `<leader>d` - Delete line
+- `<leader>d` - Delete line (to black hole)
 - `<leader>y` - Yank (copy) line
 - `Y` - Yank to end of line
 
@@ -67,6 +73,7 @@
 - `v>` - Increase indent (keep selection)
 - `vJ` - Move selection down
 - `vK` - Move selection up
+- `p` - Paste without copying deleted text
 
 **Comments**
 - `gcc` - Toggle line comment
