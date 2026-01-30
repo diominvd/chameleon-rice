@@ -38,9 +38,11 @@ vim.api.nvim_create_autocmd("Signal", {
   pattern = "SIGUSR1",
   callback = function()
     setup_theme()
-    -- Reload lualine to update colors
-    package.loaded["plugins.lualine"] = nil
-    require("lazy").reload("plugins.lualine")
+    local status_ok, lualine = pcall(require, "lualine")
+    if status_ok then
+      lualine.setup(require('lualine').get_config()) -- Пересобирает lualine с новыми цветами
+    end
+
     vim.notify("Theme colors updated!", vim.log.levels.INFO)
   end,
 })
