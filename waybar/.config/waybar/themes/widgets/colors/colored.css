@@ -2,26 +2,31 @@ menu {
     background: @surface;
 }
 
-#custom-launcher {
+/* Accent buttons */
+#custom-launcher,
+#custom-power {
     background: @primary;
     color: @on_primary;
 }
-#custom-launcher:hover {
+
+#custom-launcher:hover,
+#custom-power:hover {
     background: @secondary;
     color: @on_secondary;
 }
 
+/* Media player */
 #media {
     background: @secondary;
 }
-#custom-media-info {
-    color: @on_secondary;
-}
+
+#custom-media-info,
 #custom-media-prev,
 #custom-media-play,
 #custom-media-next {
     color: @on_secondary;
 }
+
 #custom-media-prev:hover,
 #custom-media-play:hover,
 #custom-media-next:hover {
@@ -29,27 +34,33 @@ menu {
     background: rgba(255, 255, 255, 0.1);
 }
 
+/* Workspaces */
 #workspaces button {
     background: @surface_variant;
     color: @on_surface_variant;
 }
+
 #workspaces button.active {
     background: @primary;
     color: @on_primary;
 }
+
 #workspaces button:hover {
     background: @secondary_container;
     color: @on_secondary_container;
 }
+
 #workspaces button.visible,
 #workspaces button.persistent {
     color: @on_primary;
 }
+
 #workspaces button.visible:hover,
 #workspaces button.persistent:hover {
     color: @on_secondary_container;
 }
 
+/* Standard modules (Default state) */
 #disk.root,
 #disk.home,
 #custom-minimize,
@@ -59,58 +70,42 @@ menu {
 #pulseaudio,
 #network,
 #custom-mihomo,
-#battery,
-#language {
+#custom-battery,
+#language,
+#tray,
+#clock {
     background: @surface_variant;
     color: @on_surface_variant;
 }
 
+/* Hovers for standard modules */
 #custom-minimize:hover,
 #custom-brightness:hover,
 #bluetooth:hover,
 #pulseaudio:hover,
 #network:hover,
 #custom-mihomo:hover,
-#battery:hover,
+#custom-battery:hover,
 #language:hover {
     background: @secondary_container;
     color: @on_secondary_container;
 }
 
-#custom-brightness.on {
+/* Active states (Activation indication) */
+#custom-brightness.on,
+#custom-mihomo.connected,
+#custom-battery.eco {
   background: @primary;
   color: @on_primary;
 }
 
-#custom-mihomo.connected {
-  background: @primary;
-  color: @on_primary;
-}
-
+/* Audio states */
 #pulseaudio.muted {
     background: @tertiary_container;
     color: @on_tertiary_container;
 }
+
 #pulseaudio.muted:hover {
     background: @tertiary;
     color: @on_tertiary;
-}
-
-#tray {
-    background: @surface_variant;
-    color: @on_surface_variant;
-}
-
-#clock {
-    background: @surface_variant;
-    color: @on_surface_variant;
-}
-
-#custom-power {
-    background: @primary;
-    color: @on_primary;
-}
-#custom-power:hover {
-    background: @secondary;
-    color: @on_secondary;
 }

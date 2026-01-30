@@ -13,7 +13,7 @@
     "pulseaudio",
     "network",
     "custom/mihomo",
-    "battery",
+    "custom/battery",
     "tray",
     "hyprland/language",
     "clock",
@@ -123,7 +123,7 @@
   },
   "pulseaudio": {
     "format": "{icon}  {volume}%",
-    "format-muted": "  Muted",
+    "format-muted": "  Muted",
     "format-icons": {
       "headphone": "",
       "default": ["", "", ""],
@@ -149,13 +149,15 @@
       "on-click-right": "kitty --hold -e mihomo-tui",
       "tooltip": false
   },
-  "battery": {
-    "interval": 60,
-    "states": { "warning": 30, "critical": 15 },
-    "format": "{icon}  {capacity}%",
-    "format-charging": "  {capacity}%",
-    "format-icons": ["", "", "", "", "", "", "", "", "", "", ""],
+  "custom/battery": {
+    "exec": "~/.config/waybar/scripts/battery.sh",
+    "return-type": "json",
+    "interval": 10,
+    "signal": 8,
+    "format": "{}",
+    "on-click": "~/.config/scripts/power_save.sh",
     "on-click-right": "kitty -e sudo powertop",
+    "tooltip": false
   },
   "tray": {
     "icon-size": 14,
