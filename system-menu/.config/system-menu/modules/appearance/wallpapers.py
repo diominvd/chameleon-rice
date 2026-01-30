@@ -16,6 +16,7 @@ FOLDER_CONFIG = {
     "Green": {"color": "#a6e3a1", "icon": ""},
     "Orange": {"color": "#fab387", "icon": ""},
     "Pink": {"color": "#f5c2e7", "icon": ""},
+    "Red": {"color": "#f38ba8", "icon": ""},
     "Violet": {"color": "#cba6f7", "icon": ""},
     "White": {"color": "#ffffff", "icon": ""},
     "Yellow": {"color": "#f9e2af", "icon": ""},
